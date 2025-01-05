@@ -180,7 +180,6 @@ footer {
         border-radius: 10px;
     }
 
-    
     .scrollable {
         max-height: 200px;
         overflow-y: auto;
@@ -198,7 +197,11 @@ footer {
         gap: 10px;
     }
 
-  
+    .anime-img {
+        width: 100%;
+        margin-right: 0;
+        left: 0;
+        max-width: 100%;
     }
 
     .image-row {
@@ -230,7 +233,7 @@ footer {
         font-size: 1em;
         line-height: 1.5em;
     }
-
+}
 
 @media screen and (min-width: 600px) {
     body {
@@ -251,9 +254,6 @@ footer {
         border-radius: 10px;
     }
 
-  
-    }
-
     .more-info {
         font-size: 14px;
         margin-left: 73px;
@@ -266,8 +266,12 @@ footer {
         gap: 20px;
     }
 
-  
-    
+    .anime-img {
+        width: 100%;
+        margin-right: 150px;
+        left: 200px;
+        max-width: 100%;
+    }
 
     .image-row {
         flex-direction: row;
@@ -292,6 +296,7 @@ footer {
     .content {
         margin-left: 80px;
     }
+}
 
 
 
