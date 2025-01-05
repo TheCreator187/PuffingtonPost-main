@@ -4,18 +4,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Entertainment News</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <style>
+        .taskbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .taskbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .taskbar li {
+            float: left;
+        }
+        .taskbar li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+        }
+        .taskbar li a i {
+            font-size: 18px;
+        }
+        .taskbar li a:hover, .dropdown:hover .dropbtn {
+            background-color: #111;
+        }
+        .taskbar li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media screen and (max-width: 600px) {
+            .taskbar ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .taskbar li {
+                float: none;
+            }
+        }
+        body {
+            background-color: white;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <a href="../index.html"><i class="fas fa-home"></i></a>
-        <a href="../more.html"><i class="fas fa-ellipsis-h"></i></a>
-        <a href="../about.html"><i class="fas fa-info-circle"></i></a>
-        <a href="../merch.html"><i class="fas fa-shopping-cart"></i></a>
+    <header>
+    </header>
+    <div class="taskbar">
+        <ul>
+            <li><a href="/index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="/news/cannabis-news.html"><i class="fas fa-newspaper"></i></a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-film"></i></a>
+                <div class="dropdown-content">
+                    <a href="/news/entertainment-news.html"><i class="fas fa-video"></i></a>
+                    <a href="/music"><i class="fas fa-music"></i></a>
+                    <a href="/news/sports-update.html"><i class="fas fa-tv"></i></a>
+                </div>
+            </li>
+            <li><a href="/about.html"><i class="fas fa-envelope"></i></a></li>
+        </ul>
     </div>
     <div class="content">
-        <h1>Entertainment News</h1>
-        <p>There will be a new movie coming out next week. Make sure to check it out in theaters.</p>
+   <div>
+    </div>
+   <img src="/images/diddy.jpg" alt="diddy" width="350" " style="border-radius: 25px;">
+   
+   
     </div>
 </body>
 </html>
