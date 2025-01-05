@@ -180,6 +180,7 @@ footer {
         border-radius: 10px;
     }
 
+    
     .scrollable {
         max-height: 200px;
         overflow-y: auto;
@@ -265,12 +266,8 @@ footer {
         gap: 20px;
     }
 
-    .anime-img {
-        width: 100%;
-        margin-right: 150px;
-        left: 200px;
-        max-width: 100%;
-    }
+  
+    
 
     .image-row {
         flex-direction: row;
