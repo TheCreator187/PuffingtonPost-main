@@ -87,6 +87,13 @@ a {
     margin: auto;
 }
 
+.centered-content {        /*breaking news*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 main {
     padding: 20px;
 }
