@@ -139,6 +139,12 @@ footer {
 .content {
     margin-left: 40px;
 }
+
+.scrollable {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
@@ -165,6 +171,11 @@ footer {
         overflow-y: auto;
         border: 1px solid #ccc;
         border-radius: 10px;
+    }
+
+    .scrollable {
+        max-height: 200px;
+        overflow-y: auto;
     }
 
     .more-info {
@@ -236,6 +247,9 @@ footer {
         border-radius: 10px;
     }
 
+  
+    }
+
     .more-info {
         font-size: 14px;
         margin-left: 73px;
@@ -278,6 +292,6 @@ footer {
     .content {
         margin-left: 80px;
     }
-}
+
 
 
