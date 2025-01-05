@@ -197,11 +197,7 @@ footer {
         gap: 10px;
     }
 
-    .anime-img {
-        width: 100%;
-        margin-right: 0;
-        left: 0;
-        max-width: 100%;
+  
     }
 
     .image-row {
@@ -233,7 +229,7 @@ footer {
         font-size: 1em;
         line-height: 1.5em;
     }
-}
+
 
 @media screen and (min-width: 600px) {
     body {
