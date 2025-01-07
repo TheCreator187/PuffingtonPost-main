@@ -102,10 +102,6 @@ a {
     margin: auto;
 }
 
-main {
-    padding: 5px;
-    margin: -15px;
-}
 
 .post-container {
     margin-bottom: 20px;
@@ -181,18 +177,8 @@ p {
         font-size: 14px;
     }
 
-    header {
-        padding: 10px;
-    }
-
-    .puffington-post-intro,
-    .silky-gelato-intro {
-        font-size: 12px;
-        padding: 10px;
-        max-height: 200px;
-        overflow-y: auto;
-        border-radius: 10px;
-    }
+  
+   
 
     .scrollable {
         max-height: 200px;
@@ -222,9 +208,8 @@ p {
         max-width: 100%;
     }
 
-    .back-button {
-        width: 100%;
-        margin-top: 10px;
+    .content {
+        margin-left: 40px;
     }
 
     .sidebar {
@@ -241,10 +226,7 @@ p {
         line-height: 1.5em;
     }
 
-    .mainlogo {
-        display: block; /* Ensure it remains block on mobile */
-        margin: 0 auto; /* Center the logo on mobile */
-    }
+ 
 }
 
 @media screen and (min-width: 600px) {
