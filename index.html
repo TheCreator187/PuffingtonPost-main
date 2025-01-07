@@ -14,8 +14,16 @@
             overflow-y: auto;
         }
         header {
+            text-align: center; 
+        }
+        .content {
+            min-height: calc(100vh - 100px); /* Adjust based on header and footer height */
+            padding-bottom: 50px; /* Add padding to ensure footer does not overlap content */
+        }
+        footer {
             text-align: center;
-            margin-top: 20px;
+            padding: 20px 0;
+            background-color: #f1f1f1;
         }
     </style>
 </head>
@@ -121,9 +129,9 @@
                 </div>
             </section>
         </main>
-        <footer> 
-            <p>&copy; 2024 Puffington Post. All rights reserved.</p>
-        </footer>
     </div>
+    <footer> 
+        <p>&copy; 2024 Puffington Post. All rights reserved.</p>
+    </footer>
 </body>
 </html>
