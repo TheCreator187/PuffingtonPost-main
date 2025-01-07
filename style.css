@@ -5,7 +5,6 @@ header {
     background: linear-gradient(135deg, #31323c, #262626); /* Purple-pink gradient 6a58a5 */
     border-radius: 15px;
     text-align: center;
-    margin-top: 20px;
 }
 
 body {
@@ -14,10 +13,13 @@ body {
     opacity: 0.9;
     box-sizing: border-box;
     background: linear-gradient(135deg, #2b2b2c, #090909); /* Purple-pink gradient 6a58a5 */
+    text-align: left; /* Make all page content left-justified */
+
 }
 
 .mainlogo {
-    display: block;
+    display: block; /* Fix display property */
+    margin: 0 auto; /* Center the logo */
 }
 
 .home-button {
@@ -95,12 +97,13 @@ a {
 }
 
 .centered-container {
-    text-align: center;
+    text-align: left; /* Make centered container content left-justified */
     margin: auto;
 }
 
 main {
-    padding: 20px;
+    padding: 5px;
+    margin: -15px;
 }
 
 .post-container {
@@ -109,10 +112,18 @@ main {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 5px; /* Reduced padding to make footer thinner */
     background-color: #2e2b35; /* Pastel pink */
     border-radius: 15px;
     align-self: center;
+    white-space: nowrap; /* Ensure text is only one line */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    width: 100%; /* Stretch footer to fit whole page horizontally */
+    position: fixed; /* Fix footer at the bottom */
+    bottom: 0; /* Align footer to the bottom */
+    left: 0; /* Align footer to the left */
+    font-size: xx-small;
 }
 
 .sidebar {
@@ -159,7 +170,7 @@ footer {
 }
 
 p {
-    max-height: 150px;
+    max-height: 250px;
     overflow-y: auto;
 }
 
@@ -170,7 +181,6 @@ p {
     }
 
     header {
-        flex-direction: column;
         padding: 10px;
     }
 
@@ -180,7 +190,6 @@ p {
         padding: 10px;
         max-height: 200px;
         overflow-y: auto;
-        border: 1px solid #ccc;
         border-radius: 10px;
     }
 
@@ -230,6 +239,11 @@ p {
         font-size: 1em;
         line-height: 1.5em;
     }
+
+    .mainlogo {
+        display: block; /* Ensure it remains block on mobile */
+        margin: 0 auto; /* Center the logo on mobile */
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -242,14 +256,7 @@ p {
         padding: 20px;
     }
 
-    .puffington-post-intro {
-        font-size: 14px;
-        padding: 20px;
-        max-height: 200px;
-        overflow-y: auto;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
+ 
 
     .more-info {
         font-size: 14px;
@@ -263,12 +270,7 @@ p {
         gap: 20px;
     }
 
-    .anime-img {
-        width: 100%;
-        margin-right: 150px;
-        left: 200px;
-        max-width: 100%;
-    }
+
 
     .image-row {
         flex-direction: row;
@@ -281,10 +283,6 @@ p {
         max-width: 100%;
     }
 
-    .back-button {
-        width: auto;
-        margin-top: 20px;
-    }
 
     .sidebar {
         width: 60px;
@@ -294,6 +292,9 @@ p {
         margin-left: 80px;
     }
 }
+
+/* Remove duplicate media query */
+
 
 
 
