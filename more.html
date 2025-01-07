@@ -65,6 +65,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100vh; /* Ensure body takes full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+        .content {
+            flex: 1; /* Allow content to grow and fill available space */
+            overflow: auto; /* Enable scrolling within the content area if needed */
         }
         #trivia-game {
             max-width: 85%; /* Slightly decreased width */
@@ -73,6 +79,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #1b4287;
+            flex-shrink: 0; /* Prevent shrinking */
         }
         #trivia-game p, #trivia-game button {
             font-size: 2.2em; /* Slightly decreased font size */
@@ -111,15 +118,18 @@
 </head>
 <body>
     <img src="/images/pufflogo2.png" alt="Puffington Post Logo" width="400" height="400">
-    <!-- ...existing code... -->
-    <div id="trivia-game">
-        <p id="question"></p>
-        <button onclick="checkAnswer('a')" id="optionA"></button>
-        <button onclick="checkAnswer('b')" id="optionB"></button>
-        <button onclick="checkAnswer('c')" id="optionC"></button>
-        <button onclick="checkAnswer('d')" id="optionD"></button>
-        <p id="result"></p>
-        <p>Score: <span id="score">0</span></p>
+    <div class="content">
+        <!-- ...existing code... -->
+        <div id="trivia-game">
+            <p id="question"></p>
+            <button onclick="checkAnswer('a')" id="optionA"></button>
+            <button onclick="checkAnswer('b')" id="optionB"></button>
+            <button onclick="checkAnswer('c')" id="optionC"></button>
+            <button onclick="checkAnswer('d')" id="optionD"></button>
+            <p id="result"></p>
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <!-- ...existing code... -->
     </div>
     <script type="text/javascript">
         const questions = [
