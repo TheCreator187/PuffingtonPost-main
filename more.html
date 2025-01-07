@@ -62,6 +62,9 @@
     <style>
         body {
             overflow: hidden; /* Make the page unscrollable */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         #trivia-game {
             max-width: 85%; /* Slightly decreased width */
@@ -99,11 +102,15 @@
             #trivia-game p, #trivia-game button {
                 font-size: 1.5em; /* Adjusted font size for mobile */
             }
+            img[alt="Puffington Post Logo"] {
+                width: 300px; /* Adjusted width for mobile */
+                height: 300px; /* Adjusted height for mobile */
+            }
         }
     </style>
 </head>
 <body>
-    <img src="/images/pufflogo2.png" alt="Puffington Post Logo" width="200" height="200">
+    <img src="/images/pufflogo2.png" alt="Puffington Post Logo" width="400" height="400">
     <!-- ...existing code... -->
     <div id="trivia-game">
         <p id="question"></p>
