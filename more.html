@@ -1,4 +1,40 @@
 <!-- ...existing code... -->
+<style>
+    #trivia-game {
+        max-width: 600px;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    #trivia-game p, #trivia-game button {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+    #trivia-game button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1em;
+    }
+    #trivia-game button:hover {
+        background-color: #45a049;
+    }
+    @media (max-width: 600px) {
+        #trivia-game {
+            width: 100%;
+            padding: 5px;
+        }
+        #trivia-game p, #trivia-game button {
+            font-size: 1em;
+        }
+    }
+</style>
+<!-- ...existing code... -->
 <h2>Cannabis Trivia Game</h2>
 <div id="trivia-game">
     <p id="question"></p>
@@ -7,6 +43,7 @@
     <button onclick="checkAnswer('c')" id="optionC"></button>
     <button onclick="checkAnswer('d')" id="optionD"></button>
     <p id="result"></p>
+    <p>Score: <span id="score">0</span></p>
 </div>
 <script type="text/javascript">
     const questions = [
@@ -29,11 +66,42 @@
                 d: "Portugal"
             },
             correct: "c"
+        },
+        {
+            question: "What is the primary use of industrial hemp?",
+            options: {
+                a: "Recreational drug",
+                b: "Textiles and fibers",
+                c: "Medicine",
+                d: "Food"
+            },
+            correct: "b"
+        },
+        {
+            question: "Which part of the cannabis plant is used for its psychoactive effects?",
+            options: {
+                a: "Roots",
+                b: "Leaves",
+                c: "Flowers",
+                d: "Seeds"
+            },
+            correct: "c"
+        },
+        {
+            question: "What is the legal age for cannabis use in Canada?",
+            options: {
+                a: "16",
+                b: "18",
+                c: "19",
+                d: "21"
+            },
+            correct: "c"
         }
         // Add more questions as needed
     ];
 
     let currentQuestionIndex = 0;
+    let score = 0;
 
     function loadQuestion() {
         const question = questions[currentQuestionIndex];
@@ -49,9 +117,11 @@
         const question = questions[currentQuestionIndex];
         if (answer === question.correct) {
             document.getElementById('result').innerText = 'Correct!';
+            score++;
         } else {
             document.getElementById('result').innerText = 'Wrong!';
         }
+        document.getElementById('score').innerText = score;
         currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
         setTimeout(loadQuestion, 2000);
     }
