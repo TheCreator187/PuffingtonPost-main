@@ -1,23 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>More</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">     <!-- Ensure Font Awesome is included -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-       <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
-    <div class="content">
-        <header>
-         <h1>More</h1>
-        </header>
-       <main>
-        <section>
-            <p>Coming Soon.</p>
-            <!-- Add your items here -->
-        </section>
-    </main>
+<!-- ...existing code... -->
+<h2>Cannabis Trivia Game</h2>
+<div id="trivia-game">
+    <p id="question"></p>
+    <button onclick="checkAnswer('a')" id="optionA"></button>
+    <button onclick="checkAnswer('b')" id="optionB"></button>
+    <button onclick="checkAnswer('c')" id="optionC"></button>
+    <button onclick="checkAnswer('d')" id="optionD"></button>
+    <p id="result"></p>
+</div>
+<script type="text/javascript">
+    const questions = [
+        {
+            question: "What is the main psychoactive compound in cannabis?",
+            options: {
+                a: "CBD",
+                b: "THC",
+                c: "CBN",
+                d: "CBC"
+            },
+            correct: "b"
+        },
+        {
+            question: "Which country was the first to legalize cannabis?",
+            options: {
+                a: "Canada",
+                b: "Netherlands",
+                c: "Uruguay",
+                d: "Portugal"
+            },
+            correct: "c"
+        }
+        // Add more questions as needed
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function loadQuestion() {
+        const question = questions[currentQuestionIndex];
+        document.getElementById('question').innerText = question.question;
+        document.getElementById('optionA').innerText = question.options.a;
+        document.getElementById('optionB').innerText = question.options.b;
+        document.getElementById('optionC').innerText = question.options.c;
+        document.getElementById('optionD').innerText = question.options.d;
+        document.getElementById('result').innerText = '';
+    }
+
+    function checkAnswer(answer) {
+        const question = questions[currentQuestionIndex];
+        if (answer === question.correct) {
+            document.getElementById('result').innerText = 'Correct!';
+        } else {
+            document.getElementById('result').innerText = 'Wrong!';
+        }
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+        setTimeout(loadQuestion, 2000);
+    }
+
+    loadQuestion();
+</script>
+<!-- ...existing code... -->
