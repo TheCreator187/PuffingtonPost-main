@@ -2,9 +2,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     background: linear-gradient(135deg, #31323c, #262626); /* Purple-pink gradient 6a58a5 */
     border-radius: 15px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+
 }
 
 body {
@@ -87,12 +92,6 @@ a {
     margin: auto;
 }
 
-.centered-content {        /*breaking news*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
 main {
     padding: 20px;
