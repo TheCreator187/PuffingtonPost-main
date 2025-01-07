@@ -4,8 +4,8 @@ header {
     align-items: center;
     background: linear-gradient(135deg, #31323c, #262626); /* Purple-pink gradient 6a58a5 */
     border-radius: 15px;
-    
-
+    text-align: center;
+    margin-top: 20px;
 }
 
 body {
@@ -47,6 +47,7 @@ h1 {
     justify-content: center;
     display: flex;
 }
+
 h2 {
     font-size: 1.5em;
     color: #9aa19c;
@@ -69,6 +70,8 @@ h2 {
 
 img {
     border-radius: 25%;
+    max-width: 100%;
+    height: auto;
 }
 
 .image-container {
@@ -95,7 +98,6 @@ a {
     text-align: center;
     margin: auto;
 }
-
 
 main {
     padding: 20px;
@@ -147,7 +149,8 @@ footer {
 }
 
 .content {
-    margin-left: 80px;
+    margin-left: 80px;  /* Cannabis New Content */
+    padding: 1px 16px;
 }
 
 .scrollable {
@@ -155,8 +158,12 @@ footer {
     overflow-y: auto;
 }
 
+p {
+    max-height: 150px;
+    overflow-y: auto;
+}
 
-
+/* Media queries */
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
@@ -167,15 +174,7 @@ footer {
         padding: 10px;
     }
 
-    .puffington-post-intro {
-        font-size: 12px;
-        padding: 10px;
-        max-height: 200px;
-        overflow-y: auto;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-
+    .puffington-post-intro,
     .silky-gelato-intro {
         font-size: 12px;
         padding: 10px;
@@ -200,13 +199,6 @@ footer {
     .image-container {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .anime-img {
-        width: 100%;
-        margin-right: 0;
-        left: 0;
-        max-width: 100%;
     }
 
     .image-row {
@@ -302,6 +294,7 @@ footer {
         margin-left: 80px;
     }
 }
+
 
 
 
