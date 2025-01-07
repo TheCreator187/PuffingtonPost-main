@@ -12,13 +12,16 @@
 
 
 <style>
+    body {
+        overflow: hidden; /* Make the page unscrollable */
+    }
     #trivia-game {
-        max-width: 800px; /* Increased width */
+        max-width: 90%; /* Adjusted width to prevent clipping */
         margin: auto;
         padding: 20px; /* Increased padding */
         border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #2d3053;
+        border-radius: 10px;
+        background-color: #1b4287;
     }
     #trivia-game p, #trivia-game button {
         font-size: 2.5em; /* Increased font size */
@@ -32,9 +35,13 @@
         background-color: #4CAF50;
         color: white;
         font-size: 1.5em; /* Increased font size */
+        cursor: pointer; /* Change cursor to pointer */
     }
     #trivia-game button:hover {
         background-color: #45a049;
+    }
+    a {
+        cursor: pointer; /* Change cursor to pointer for links */
     }
     @media (max-width: 600px) {
         #trivia-game {
@@ -142,4 +149,8 @@
 </script>
 <!-- ...existing code... -->
 
-<img src="./images/pufflogo2.png" alt="Puffington Post Logo" width="400" title="Puffington Post" class="mainlogo" width="300" title="Puffington Post" class="mainlogo">
+<a href="index.html">
+    <img src="./images/pufflogo2.png" alt="Puffington Post Logo" width="400" title="Puffington Post" class="mainlogo">
+</a>
+</head>
+
