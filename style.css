@@ -40,6 +40,13 @@ body {
     margin-right: auto;
 }
 
+h1 {
+    font-size: 2em;
+    color: #28a745;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+}
 h2 {
     font-size: 1.5em;
     color: #9aa19c;
