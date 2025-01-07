@@ -10,7 +10,6 @@ header {
 body {
     font-family: 'JetBrains Mono', monospace;
     color: bisque;
-    opacity: 0.9;
     box-sizing: border-box;
     background: linear-gradient(135deg, #2b2b2c, #090909); /* Purple-pink gradient 6a58a5 */
     text-align: left; /* Make all page content left-justified */
@@ -53,6 +52,11 @@ h1 {
 h2 {
     font-size: 1.5em;
     color: #9aa19c;
+}
+p {
+    font-size: 1em;
+    color: bisque;
+    
 }
 
 
@@ -107,21 +111,6 @@ a {
     margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 5px; /* Reduced padding to make footer thinner */
-    background-color: #2e2b35; /* Pastel pink */
-    border-radius: 15px;
-    align-self: center;
-    white-space: nowrap; /* Ensure text is only one line */
-    overflow: hidden; /* Hide overflow if text is too long */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
-    width: 100%; /* Stretch footer to fit whole page horizontally */
-    position: fixed; /* Fix footer at the bottom */
-    bottom: 0; /* Align footer to the bottom */
-    left: 0; /* Align footer to the left */
-    font-size: xx-small;
-}
 
 .sidebar {
     height: 100%;
@@ -161,10 +150,6 @@ footer {
     padding: 1px 16px;
 }
 
-.scrollable {
-    max-height: 200px;
-    overflow-y: auto;
-}
 
 p {
     max-height: 250px;
@@ -172,18 +157,13 @@ p {
 }
 
 /* Media queries */
+
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
     }
 
-  
-   
 
-    .scrollable {
-        max-height: 200px;
-        overflow-y: auto;
-    }
 
     .more-info {
         font-size: 12px;
@@ -221,11 +201,7 @@ p {
         height: 100%;
     }
 
-    p, h2, h3, h4, h5, h6 {
-        font-size: 1em;
-        line-height: 1.5em;
-    }
-
+  
  
 }
 
@@ -282,11 +258,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-footer {
-    margin-top: auto;
-    /* Add any additional styling needed for the footer */
 }
 
 
