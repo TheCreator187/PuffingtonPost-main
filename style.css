@@ -97,9 +97,7 @@ img {
     text-align: center;
 }
 
-a {
-    color: rgb(255, 142, 90); /* Link color */
-}
+
 
 .centered-container {
     text-align: left; /* Make centered container content left-justified */
@@ -109,45 +107,6 @@ a {
 
 .post-container {
     margin-bottom: 20px;
-}
-
-
-.sidebar {
-    height: 100%;
-    width: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #31323c; /* Pastel pink */
-    padding-top: 20px;
-    z-index: 1000; /* Ensure sidebar is on top */
-}
-
-.sidebar a {
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 18px;
-    color: bisque;
-    display: block;
-    text-align: center;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.sidebar i {
-    font-size: 24px;
-    color: bisque; /* Ensure icons are visible */
-}
-
-.navbar {
-    display: none;
-}
-
-.content {
-    margin-left: 80px;  /* Cannabis New Content */
-    padding: 1px 16px;
 }
 
 
@@ -192,9 +151,7 @@ p {
         margin-left: 40px;
     }
 
-    .sidebar {
-        width: 50px;
-    }
+   
 
     img {
         width: 100%;
@@ -243,25 +200,11 @@ p {
     }
 
 
-    .sidebar {
-        width: 60px;
-    }
-
+   
     .content {
         margin-left: 80px;
     }
 }
-
-/* Remove duplicate media query */
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-
 
 
 
