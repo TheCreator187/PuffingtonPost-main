@@ -1,0 +1,20 @@
+/* ...existing code... */
+
+.sidebar {
+    /* ...existing styles... */
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* Add any additional styles needed for the top bar */
+}
+
+/* Adjust the main content to account for the top bar */
+.main-content {
+    margin-top: 50px; /* Adjust this value based on the height of your top bar */
+    /* ...existing styles... */
+}
